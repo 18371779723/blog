@@ -53,4 +53,4 @@ jobs:
           branch: blog_pages
           folder: src/.vuepress/dist
           # 域名
-          fqdn:  wyqjishu.us.kg  
+          fqdn:  wyqjishu.us.kg
