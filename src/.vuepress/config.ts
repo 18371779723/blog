@@ -4,11 +4,9 @@ import theme from "./theme.js";
 
 export default defineUserConfig({
   base: "/",
-
   lang: "zh-CN",
-  title: "王彦群的博客",
+  title: "王彦群Coding",
   description: "王彦群的博客演示",
-
   theme,
 
   // 和 PWA 一起启用

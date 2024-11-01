@@ -7,13 +7,13 @@ export default hopeTheme({
   hostname: "https://mister-hope.github.io",
 
   author: {
-    name: "Mr.Hope",
+    name: "王彦群",
     url: "https://mister-hope.com",
   },
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "/assets/images/wuxianjinbu.png",
 
   repo: "vuepress-theme-hope/vuepress-theme-hope",
 
@@ -31,8 +31,9 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "一个前端开发者",
+    description: "一个后端开发者,点击查看详情",
     intro: "/intro.html",
+    avatar: "/assets/images/wyq.jpg",
     medias: {
       Baidu: "https://example.com",
       BiliBili: "https://example.com",
@@ -85,7 +86,7 @@ export default hopeTheme({
   },
 
   // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
-  // hotReload: true,
+   hotReload: true,
 
   // 在这里配置主题提供的插件
   plugins: {
