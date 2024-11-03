@@ -131,7 +131,9 @@ background: rgba(253, 230, 138, 0.15)
 ```js
 const a = 1;
 ```
-
+```java
+int a=2;
+```
 :::
 
 ::: tip 自定义标题

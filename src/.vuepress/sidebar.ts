@@ -23,4 +23,14 @@ export default sidebar({
       link: "https://ecosystem.vuejs.press/zh/plugins/markdown/revealjs/demo.html",
     },
   ],
+  "/small/": [
+    "",
+    {
+      text: "功能实现",
+      icon: "laptop-code",
+      prefix: "功能实现/",
+      link: "功能实现/",
+      children: "structure",
+    },
+  ],
 });
