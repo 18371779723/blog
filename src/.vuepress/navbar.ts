@@ -5,6 +5,11 @@ export default navbar([
   "/demo/",
   "/small/",
   {
+    text: "开发小记",
+    icon: "code",
+    link: "/dev-notes/",
+  },
+  {
     text: "博文",
     icon: "pen-to-square",
     prefix: "/posts/",

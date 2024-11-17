@@ -33,4 +33,13 @@ export default sidebar({
       children: "structure",
     },
   ],
+  "/dev-notes/": [
+    "",
+    {
+      text: "后端开发",
+      icon: "code",
+      prefix: "backend/",
+      children: "structure",
+    },
+  ],
 });
