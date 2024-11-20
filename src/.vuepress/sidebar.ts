@@ -26,7 +26,7 @@ export default sidebar({
   "/small/": [
     "",
     {
-      text: "功能实现",
+      text: "核心功能实现",
       icon: "laptop-code",
       prefix: "功能实现/",
       link: "功能实现/",
