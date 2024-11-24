@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 
 import theme from "./theme.js";
+import { autoSidebarPlugin } from './plugins/autoSidebar';
 
 export default defineUserConfig({
   base: "/",
@@ -11,4 +12,7 @@ export default defineUserConfig({
 
   // 和 PWA 一起启用
   // shouldPrefetch: false,
+  plugins: [
+    autoSidebarPlugin,
+  ],
 });

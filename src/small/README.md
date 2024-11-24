@@ -2,6 +2,7 @@
 title: 小型支付商城系统
 index: true
 icon: home
+date: 2024-11-1
 category:
   - 项目介绍
 ---

@@ -3,7 +3,27 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   "/",
   "/demo/",
-  "/small/",
+  {
+    text: "项目经历",
+    icon: "project-diagram",
+    children: [
+      {
+        text: "大营销平台",
+        icon: "chart-line",
+        link: "/big-market/",
+      },
+      {
+        text: "小型支付商城系统",
+        icon: "shop",
+        link: "/small/",
+      },
+      {
+        text: "在线教育平台",
+        icon: "graduation-cap",
+        link: "/education/",
+      },
+    ],
+  },
   {
     text: "开发小记",
     icon: "code",
