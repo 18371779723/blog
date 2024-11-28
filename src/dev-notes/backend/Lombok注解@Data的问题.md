@@ -1,6 +1,7 @@
 ---
 title: Lombok注解@Data的问题
 icon: code
+date: 2024-10-09
 ---
 
 # Lombok 注解@Data 的问题

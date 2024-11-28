@@ -1,6 +1,7 @@
 ---
 title: Mybatis-Plus 拦截器/插件
 icon: code
+date: 2024-09-31
 ---
 
 # Mybatis-Plus 拦截器/插件
