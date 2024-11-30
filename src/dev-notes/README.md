@@ -12,3 +12,4 @@ icon: code
 - [Lombok注解@Data的问题](./backend/Lombok注解@Data的问题.md)
 - [Mp拦截器](./backend/Mp拦截器.md)
 - [Redis消息队列，重复消费问题](./backend/Redis消息队列，重复消费问题.md)
+- [页面高并发优化](./backend/页面高并发优化.md)
