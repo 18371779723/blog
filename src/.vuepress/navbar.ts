@@ -1,8 +1,53 @@
 import { navbar } from "vuepress-theme-hope";
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+
+// 动态生成项目导航
+const generateProjectNav = () => {
+  const projectsPath = path.resolve(__dirname, '../projects');
+  return fs.readdirSync(projectsPath)
+    .filter(file => {
+      const filePath = path.join(projectsPath, file);
+      return fs.existsSync(filePath) && 
+             fs.statSync(filePath).isDirectory() && 
+             file !== 'README.md' && 
+             file !== 'node_modules';
+    })
+    .map(project => {
+      const readmePath = path.join(projectsPath, project, 'README.md');
+      let title = project;
+      let icon = "folder";
+      
+      if (fs.existsSync(readmePath)) {
+        const content = fs.readFileSync(readmePath, 'utf-8');
+        const frontMatter = matter(content);
+        title = frontMatter.data.title || project;
+        icon = frontMatter.data.icon || "folder";
+      }
+      
+      return {
+        text: title,
+        icon: icon,
+        link: `/projects/${project}/`,
+      };
+    })
+    .sort((a, b) => a.text.localeCompare(b.text)); // 按标题字母顺序排序
+};
 
 export default navbar([
   "/",
-  "/demo/",
+  {
+    text: "实习经历",
+    icon: "briefcase",
+    children: [
+      {
+        text: "湖北爱库特科技有限公司",
+        icon: "building",
+        link: "/internship/",
+      },
+    ],
+  },
   {
     text: "项目经历",
     icon: "project-diagram",
@@ -10,17 +55,22 @@ export default navbar([
       {
         text: "大营销平台",
         icon: "chart-line",
-        link: "/big-market/",
+        link: "/projects/big-market/",
       },
       {
         text: "小型支付商城系统",
         icon: "shop",
-        link: "/small/",
+        link: "/projects/small/",
       },
       {
         text: "在线教育平台",
         icon: "graduation-cap",
-        link: "/education/",
+        link: "/projects/education/",
+      },
+      {
+        text: "OpenAI代码评审组件",
+        icon: "robot",
+        link: "/projects/code-review/",
       },
     ],
   },
@@ -28,51 +78,5 @@ export default navbar([
     text: "开发小记",
     icon: "code",
     link: "/dev-notes/",
-  },
-  {
-    text: "博文",
-    icon: "pen-to-square",
-    prefix: "/posts/",
-    children: [
-      {
-        text: "苹果",
-        icon: "pen-to-square",
-        prefix: "apple/",
-        children: [
-          { text: "苹果1", icon: "pen-to-square", link: "1" },
-          { text: "苹果2", icon: "pen-to-square", link: "2" },
-          "3",
-          "4",
-        ],
-      },
-      {
-        text: "香蕉",
-        icon: "pen-to-square",
-        prefix: "banana/",
-        children: [
-          {
-            text: "香蕉 1",
-            icon: "pen-to-square",
-            link: "1",
-          },
-          {
-            text: "香蕉 2",
-            icon: "pen-to-square",
-            link: "2",
-          },
-          "3",
-          "4",
-        ],
-      },
-      { text: "樱桃", icon: "pen-to-square", link: "cherry" },
-      { text: "火龙果", icon: "pen-to-square", link: "dragonfruit" },
-      "tomato",
-      "strawberry",
-    ],
-  },
-  {
-    text: "V2 文档",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/zh/",
   },
 ]);

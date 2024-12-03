@@ -8,7 +8,7 @@ export default hopeTheme({
 
   author: {
     name: "王彦群",
-    url: "https://mister-hope.com",
+    url: "https://wyqjishu.us.kg",
   },
 
   iconAssets: "fontawesome-with-brands",
@@ -31,46 +31,9 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "一个后端开发者,点击查看详情",
+    description: "高中开始自学计算机，具备较强的自我驱动力，乐于探索未知，对新技术敏感，能够快速提取可落地的技术方案运用到实际项目开发中。具备独立完成复杂工作、指导他人的能力，能够组织干系人对问题进行研究、分解、并完成中型项目的方案设计与实施，并成提供良好的交付物。点击查看详情",
     intro: "/intro.html",
     avatar: "/assets/images/wyq.jpg",
-    medias: {
-      Baidu: "https://example.com",
-      BiliBili: "https://example.com",
-      Bitbucket: "https://example.com",
-      Dingding: "https://example.com",
-      Discord: "https://example.com",
-      Dribbble: "https://example.com",
-      Email: "mailto:info@example.com",
-      Evernote: "https://example.com",
-      Facebook: "https://example.com",
-      Flipboard: "https://example.com",
-      Gitee: "https://example.com",
-      GitHub: "https://example.com",
-      Gitlab: "https://example.com",
-      Gmail: "mailto:info@example.com",
-      Instagram: "https://example.com",
-      Lark: "https://example.com",
-      Lines: "https://example.com",
-      Linkedin: "https://example.com",
-      Pinterest: "https://example.com",
-      Pocket: "https://example.com",
-      QQ: "https://example.com",
-      Qzone: "https://example.com",
-      Reddit: "https://example.com",
-      Rss: "https://example.com",
-      Steam: "https://example.com",
-      Twitter: "https://example.com",
-      Wechat: "https://example.com",
-      Weibo: "https://example.com",
-      Whatsapp: "https://example.com",
-      Youtube: "https://example.com",
-      Zhihu: "https://example.com",
-      VuePressThemeHope: {
-        icon: "https://theme-hope-assets.vuejs.press/logo.svg",
-        link: "https://theme-hope.vuejs.press",
-      },
-    },
   },
 
   // 加密配置
