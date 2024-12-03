@@ -11,6 +11,9 @@ importers:
       '@vuepress/bundler-vite':
         specifier: 2.0.0-rc.18
         version: 2.0.0-rc.18(@types/node@22.8.4)(sass-embedded@1.80.5)
+      gray-matter:
+        specifier: ^4.0.3
+        version: 4.0.3
       sass-embedded:
         specifier: ^1.79.5
         version: 1.80.5
