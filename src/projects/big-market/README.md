@@ -16,7 +16,7 @@ date: 2024-11-15
 
 ## 核心技术
 
-SpringBoot、MyBatis、MySQL、Redis、RabbitMQ、DB-Router、DynThreadPool
+SpringBoot、MyBatis、MySQL、Redis、RabbitMQ、ES、Canal、xxl-job、DB-Router、DynThreadPool
 
 ## 系统设计
 

@@ -1,9 +1,9 @@
 ---
 icon: circle-info
-cover: /assets/images/cover3.jpg
 date: 2024-10-31
 ---
 
-# 介绍页
+# 个人简历
 
-将你的个人介绍和档案放置在此处。
+![](/assets/images/简历1.png)
+![](/assets/images/简历2.png)

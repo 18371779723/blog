@@ -1,29 +1,70 @@
 import { sidebar } from "vuepress-theme-hope";
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+
+// 动态生成项目目录的子目录配置
+const generateProjectSidebar = () => {
+  const projectsPath = path.resolve(__dirname, '../projects');
+  const projects = fs.readdirSync(projectsPath)
+    .filter(file => {
+      const filePath = path.join(projectsPath, file);
+      return fs.existsSync(filePath) && 
+             fs.statSync(filePath).isDirectory() && 
+             file !== 'node_modules';
+    });
+
+  return projects.map(project => {
+    const readmePath = path.join(projectsPath, project, 'README.md');
+    let title = project;
+    let icon = "folder";
+    
+    if (fs.existsSync(readmePath)) {
+      const content = fs.readFileSync(readmePath, 'utf-8');
+      const frontMatter = matter(content);
+      title = frontMatter.data.title || project;
+      icon = frontMatter.data.icon || "folder";
+    }
+    
+    return {
+      text: title,
+      icon: icon,
+      prefix: `${project}/`,
+      children: "structure",
+    };
+  });
+};
 
 export default sidebar({
-  "/": [
+  "/": ["", "intro"],
+  "/projects/": [
     "",
     {
-      text: "如何使用",
-      icon: "laptop-code",
-      prefix: "demo/",
-      link: "demo/",
+      text: "项目列表",
+      icon: "folder-open",
+      prefix: "",
       children: "structure",
-    },
-    {
-      text: "文章",
-      icon: "book",
-      prefix: "posts/",
-      children: "structure",
-    },
-    "intro",
-    {
-      text: "幻灯片",
-      icon: "person-chalkboard",
-      link: "https://ecosystem.vuejs.press/zh/plugins/markdown/revealjs/demo.html",
     },
   ],
-  "/small/": [
+  "/dev-notes/": [
+    "",
+    {
+      text: "后端开发",
+      icon: "code",
+      prefix: "backend/",
+      children: "structure",
+    },
+  ],
+  "/internship/": [
+    "",
+    {
+      text: "实习经历",
+      icon: "tasks",
+      prefix: "work/",
+      children: "structure",
+    },
+  ],
+  "/projects/small/": [
     "",
     {
       text: "核心功能实现",
@@ -33,7 +74,7 @@ export default sidebar({
       children: "structure",
     },
   ],
-  "/education/": [
+  "/projects/education/": [
     "",
     {
       text: "系统架构",
@@ -48,14 +89,8 @@ export default sidebar({
       children: "structure",
     },
   ],
-  "/big-market/": [
+  "/projects/big-market/": [
     "",
-    {
-      text: "系统设计",
-      icon: "diagram-project",
-      prefix: "design/",
-      children: "structure",
-    },
     {
       text: "抽奖业务核心实现",
       icon: "cubes",
@@ -63,12 +98,18 @@ export default sidebar({
       children: "structure",
     },
   ],
-  "/dev-notes/": [
+  "/projects/code-review/": [
     "",
     {
-      text: "后端开发",
+      text: "核心功能",
       icon: "code",
-      prefix: "backend/",
+      prefix: "features/",
+      children: "structure",
+    },
+    {
+      text: "技术实现",
+      icon: "gear",
+      prefix: "implementation/",
       children: "structure",
     },
   ],
