@@ -1,4 +1,3 @@
-
 name: 部署文档
 
 on:
@@ -24,7 +23,6 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: 8
-
 
       - name: 设置 Node.js
         uses: actions/setup-node@v4
@@ -53,4 +51,4 @@ jobs:
           branch: blog_pages
           folder: src/.vuepress/dist
           # 域名
-          fqdn:  wyqjishu.us.kg
+          fqdn: wyqjishu.us.kg

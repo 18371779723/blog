@@ -40,13 +40,7 @@ export default navbar([
   {
     text: "实习经历",
     icon: "briefcase",
-    children: [
-      {
-        text: "湖北爱库特科技有限公司",
-        icon: "building",
-        link: "/internship/",
-      },
-    ],
+    link: "/internship/",
   },
   {
     text: "项目经历",
