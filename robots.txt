@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://wyqjishu.us.kg/sitemap.xml
+Sitemap: https://wyqjishu.us.kg/bolg/sitemap.xml
