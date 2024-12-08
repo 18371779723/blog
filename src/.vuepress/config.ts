@@ -4,7 +4,7 @@ import theme from "./theme.js";
 import { autoSidebarPlugin } from './plugins/autoSidebar';
 
 export default defineUserConfig({
-  base: "/",
+  base: "/bolg/",
   lang: "zh-CN",
   title: "王彦群Coding",
   description: "王彦群的博客演示",
